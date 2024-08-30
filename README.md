@@ -131,15 +131,15 @@ Este projeto fornece uma API para gerenciar medições de clientes. Ele oferece 
       {
         "measure_uuid": "string",
         "measure_datetime": "datetime",
-        "measure_type": "WATER" ou "GAS",
-        "has_confirmed": boolean,
+        "measure_type": "WATER/GAS",
+        "has_confirmed": "boolean",
         "image_url": "string"
       },
       {
         "measure_uuid": "string",
         "measure_datetime": "datetime",
-        "measure_type": "WATER" ou "GAS",
-        "has_confirmed": boolean,
+        "measure_type": "WATER/GAS",
+        "has_confirmed": "boolean",
         "image_url": "string"
       }
     ]
@@ -150,8 +150,7 @@ Este projeto fornece uma API para gerenciar medições de clientes. Ele oferece 
 ```json
   {
      "error_code": "INVALID_TYPE",
-     "error_description": “Tipo de medição não 
-      permitida”
+     "error_description": "Tipo de medição não permitida"
   }
 
   ```
@@ -160,7 +159,6 @@ Este projeto fornece uma API para gerenciar medições de clientes. Ele oferece 
   ```json
   {
      "error_code": "MEASURES_NOT_FOUND",
-     "error_description": "Nenhuma leitura 
-      encontrada"
+     "error_description": "Nenhuma leitura encontrada"
   }
   ```
