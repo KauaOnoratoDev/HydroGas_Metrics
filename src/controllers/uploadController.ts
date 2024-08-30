@@ -70,7 +70,8 @@ const uploadController = async (req: Request, res: Response) => {
       'measures.measure_datetime': {
         $gte: new Date(requestYear, requestMonth, 1).toISOString(),
         $lt: new Date(requestYear, requestMonth + 1, 1).toISOString()
-      }
+      },
+      'measures.measure_type': req.body.measure_type
     })
 
     if (existingMeasure) {
